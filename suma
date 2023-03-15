@@ -1,0 +1,22 @@
+function sum(numeros) {
+    if (numeros.length === 0) return 0;
+    if (numeros instanceof Array) {
+    let suma = numeros.reduce((acumulador, numero) => acumulador + numero);
+
+    return suma;
+    }else {
+    throw TypeError('error');
+    }
+}
+
+try {
+    console.log(sum([1, 2, 3])) // 6
+    console.log(sum([10, 8, 12, 5])) // 35
+    console.log(sum([])) // 0 
+} catch (e) {
+    console.log(e.message);
+}
+
+//console.log(sum([1, 2, 3])) // 6
+//console.log(sum([10, 8, 12, 5])) // 35
+//console.log(sum([])) // 0
