@@ -11,11 +11,10 @@ pedro.estatura = 1.8;
 delete pedro.activo;
 
 for(let llave in pedro){
-    console.log("nombre:  " + pedro.nombre);
-    console.log("edad:    " + pedro.edad);
-    console.log("hobbies: " + pedro.hobbies);
-    console.log("estatura:" + pedro.estatura);
+    if (pedro.hasOwnProperty(llave)) {
+        console.log (llave + ": " + pedro[llave]);
     }
+}
 pedro.saluda = function() {
         console.log("Hola, me llamo " +this.nombre);
 }
